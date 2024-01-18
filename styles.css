@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200&family=MuseoModerno:wght@100;200;300&family=PT+Sans+Narrow&family=Satisfy&family=Ubuntu&display=swap');
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    background-color: #f0f0f0;
+    font-family: "Arial", sans-serif;
+}
+
+
+.navbar {
+    background: linear-gradient(to right, rgba(1, 5, 16, 0.7), rgba(1, 5, 16, 0.3));;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.content {
+    padding: 20px;
+}
+
+
+/* Responsive styles */
+/* Responsive Navigation Styles */
+@media screen and (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 90%;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        background-color: rgba(51, 51, 51, 0.9); /* Semi-transparent background */
+        z-index: 1000;
+        overflow-y: auto; /* Enable scrolling for the nav-list */
+        padding-top: 100px; /* Adjusted for better spacing */
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 15px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+        z-index: 1100; /* Ensure the toggle is on top */
+    }
+}
+
+/* Hero section styles */
+.hero-image {
+    position: relative;
+    height: 100vh;
+    background-image: url('images/hero.png');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+}
+/* Center the container within the hero image */
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Style the first line of text */
+#text1 {
+    display: block;
+    font-family: 'MuseoModerno', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #cc005f;
+}
+
+/* Style the second line of text */
+#text2 {
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #00b6e4;
+    margin-top: 10px; /* Add some spacing between the lines */
+}
+
+/* Add responsiveness */
+@media screen and (max-width: 768px) {
+    #container {
+        top: 40%;
+    }
+
+    #text1 {
+        font-size: 24px;
+    }
+
+    #text2 {
+        font-size: 28px;
+        margin-top: 5px;
+    }
+    .hero-text {
+        top: 45% !important;
+    }
+}
+
+.social-icons-btn {
+    display: flex;
+  }
+  .icons {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    background: #111;
+    margin: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 
+      0 2px 2px #d1d1d1;
+    color: #fff;
+    cursor: pointer;
+    transition:
+      all 0.15s ease;
+  }
+  .twitter:hover {
+    background: #00ECEE;
+  }
+  .facebook:hover {
+    background: #4267B2;
+  }
+  .instagram:hover {
+    background-image: 
+      linear-gradient(
+      #8a3ab9,
+      #e95950, 
+      #bc2a8d, 
+      #fccc63
+      );
+  }
+  .linkedin:hover {
+    background: #0A66C2;
+  }
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #00b6e4;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #cc005f;
+  }
+  
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover:before {
+    width: 100%;
+    background: #b1dae7;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active {
+    transform: scale(0.95);
+  }
+  
+.hero-text {
+    position: absolute;
+    top: 55%;
+    width: 100%;
+}
+
+.h-text{
+    font-size: 15px;
+    font-family: 'Satisfy', cursive;
+    padding: 10px;
+}
+
+/* About section styles */
+#about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Skills section styles */
+#skills {
+    background-color: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills li {
+    display: inline-block;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* Contact section styles */
+#contact {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contact p {
+    margin: 10px 0;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .hero-text {
+        bottom: 10%;
+    }
+
+    #about,
+    #skills,
+    #contact {
+        padding: 30px 0;
+    }
+}
